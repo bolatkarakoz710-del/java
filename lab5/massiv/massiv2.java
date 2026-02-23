@@ -1,6 +1,8 @@
+package massiv;
+
 import java.util.Scanner;
 
-public class massiv1 {
+public class massiv2 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -16,14 +18,14 @@ public class massiv1 {
             array[i] = scanner.nextInt();
         }
 
-        // Ең үлкен элементті табу
-        int max = array[0];
-        for (int i = 1; i < n; i++) {
-            if (array[i] > max) {
-                max = array[i];
+        // Жұп элементтерді санау
+        int evenCount = 0;
+        for (int i = 0; i < n; i++) {
+            if (array[i] % 2 == 0) {
+                evenCount++;
             }
         }
 
-        System.out.println("Массивтегі ең үлкен элемент: " + max);
+        System.out.println("Массивтегі жұп элементтердің саны: " + evenCount);
     }
 }

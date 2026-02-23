@@ -1,3 +1,4 @@
+package Return;
 
 public class return2 {
         public static boolean isPrime(int n) {

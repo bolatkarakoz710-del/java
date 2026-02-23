@@ -1,3 +1,5 @@
+package massiv22;
+
 public class massiv21 {
     public static void main(String[] args) {
         int[][] matrix = {

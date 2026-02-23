@@ -1,3 +1,5 @@
+package Return;
+
 public class return1 {
 
     public static int square(int number) {

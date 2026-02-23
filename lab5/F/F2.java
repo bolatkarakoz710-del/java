@@ -1,6 +1,8 @@
+package F;
 
-    import java.util.Scanner;
-    public class F1 {
+import java.util.Scanner;
+
+    public class F2{
         public static void main(String[] args) {
 
             Scanner sc = new Scanner(System.in);
@@ -10,11 +12,11 @@
             double f;
 
             if (x < 0) {
-                f = x * x;
-            } else if (x >= 0 && x < 5) {
-                f = 2 * x + 1;
+                f = Math.sin(x);
+            } else if (x >= 0 && x < 2) {
+                f = Math.cos(x);
             } else {
-                f = 10;
+                f = Math.tan(x);
             }
 
             System.out.println("f(x) = " + f);
