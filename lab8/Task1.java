@@ -52,7 +52,7 @@ public class Task1 extends JPanel {
     public static void main(String[] args) {
         JFrame frame = new JFrame("y = kx графигі");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(new Task1());
+        frame.add(new tap1());
         frame.setSize(800, 600);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
