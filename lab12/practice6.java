@@ -1,0 +1,2 @@
+public class practice6 {
+}
