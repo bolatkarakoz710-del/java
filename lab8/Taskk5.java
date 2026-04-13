@@ -3,7 +3,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Task5 extends JPanel {
+public class Taskk5 extends JPanel {
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -49,7 +49,7 @@ public class Task5 extends JPanel {
     public static void main(String[] args) {
         JFrame frame = new JFrame("y = x^5 Графигі");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(new Task5());
+        frame.add(new Taskk5());
         frame.setSize(600, 600);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);

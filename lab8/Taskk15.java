@@ -2,7 +2,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Task15 extends JPanel {
+public class Taskk15 extends JPanel {
 
     // Функцияны есептеу: y = x / (3x^2 + 2x + 1)
     private double calculateY(double x) {
@@ -50,7 +50,7 @@ public class Task15 extends JPanel {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("№15 Функция графигі");
-        Task15 panel = new Task15();
+        Taskk15 panel = new Taskk15();
         frame.add(panel);
         frame.setSize(800, 600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

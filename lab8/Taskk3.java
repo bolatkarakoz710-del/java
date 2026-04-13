@@ -3,7 +3,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Task3 extends JPanel {
+public class Taskk3 extends JPanel {
 
     @Override
     protected void paintComponent(Graphics g) {

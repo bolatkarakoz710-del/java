@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Task1 extends JPanel {
+public class Task1tap extends JPanel {
     public void paint(Graphics g) {
         super.paint(g);
 
@@ -17,7 +17,7 @@ public class Task1 extends JPanel {
 
     public static void main(String[] args) {
         JFrame f = new JFrame("Task1");
-        f.add(new Task1());
+        f.add(new Task1tap());
         f.setSize(400, 300);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setVisible(true);

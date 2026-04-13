@@ -19,7 +19,7 @@ public class Task9 extends JPanel {
 
     public static void main(String[] args) {
         JFrame f = new JFrame();
-        f.add(new Task9());
+        f.add(new Taskk9());
         f.setSize(400, 300);
         f.setVisible(true);
     }

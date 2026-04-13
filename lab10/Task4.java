@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
 public class Task4 extends JPanel {
     Color color = Color.RED;
@@ -13,7 +12,7 @@ public class Task4 extends JPanel {
 
     public static void main(String[] args) {
         JFrame f = new JFrame();
-        Task4 panel = new Task4();
+        Taskk4 panel = new Taskk4();
 
         JButton btn = new JButton("Түс өзгерту");
         btn.addActionListener(e -> {

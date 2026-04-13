@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Path2D;
 
-public class Task20 extends JPanel {
+public class Taskk20 extends JPanel {
 
     // Масштабтау коэффициенттері
     private double scale = 40;
@@ -58,7 +58,7 @@ public class Task20 extends JPanel {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Функция графигі: y = 3x / (x^2 - 5)");
-        Task20 panel = new Task20();
+        Taskk20 panel = new Taskk20();
         frame.add(panel);
         frame.setSize(800, 600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

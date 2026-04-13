@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Path2D;
 
-public class Task7 extends JPanel {
+public class Taskk7 extends JPanel {
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -48,7 +48,7 @@ public class Task7 extends JPanel {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Функция графигі: y = cos(x-1) + |x|");
-        Task7 panel = new Task7();
+        Taskk7 panel = new Taskk7();
         frame.add(panel);
         frame.setSize(800, 600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

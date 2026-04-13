@@ -1,10 +1,9 @@
 
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Path2D;
 
-public class Task9 extends JPanel {
+public class Taskk8 extends JPanel {
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -18,7 +17,7 @@ public class Task9 extends JPanel {
         int centerY = height / 2;
         double scale = 40.0; // Масштаб: 1 бірлік = 40 пиксель
 
-        // Координаталар осін салу
+        // Координаталық осьтерді сызу
         g2.setColor(Color.LIGHT_GRAY);
         g2.drawLine(0, centerY, width, centerY); // X осі
         g2.drawLine(centerX, 0, centerX, height); // Y осі
@@ -26,31 +25,26 @@ public class Task9 extends JPanel {
         g2.setColor(Color.BLUE);
         g2.setStroke(new BasicStroke(2f));
 
-        // Графикті салу (екі бөліктен тұрады, өйткені x=2 нүктесінде үзіліс бар)
-        drawCurve(g2, centerX, centerY, scale, -10, 1.9); // Сол жақ бөлігі
-        drawCurve(g2, centerX, centerY, scale, 2.1, 10);  // Оң жақ бөлігі
-
-        // Асимптотаны белгілеу (x = 2)
-        g2.setColor(Color.RED);
-        float[] dash = {5f, 5f};
-        g2.setStroke(new BasicStroke(1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 10, dash, 0));
-        int asympX = (int) (centerX + 2 * scale);
-        g2.drawLine(asympX, 0, asympX, height);
+        // Графикті екі бөлікке бөліп саламыз: x < 0 және x > 0
+        drawHyperbolaPart(g2, centerX, centerY, scale, -width / 2.0, -0.1);
+        drawHyperbolaPart(g2, centerX, centerY, scale, 0.1, width / 2.0);
 
         g2.setColor(Color.BLACK);
-        g2.drawString("y = (x+3)/(x-2)", 20, 20);
-        g2.drawString("Асимптота: x = 2", asympX + 5, 40);
+        g2.drawString("y = 1/x", 20, 20);
     }
 
-    private void drawCurve(Graphics2D g2, int centerX, int centerY, double scale, double startX, double endX) {
+    private void drawHyperbolaPart(Graphics2D g2, int cx, int cy, double scale, double startX, double endX) {
         Path2D path = new Path2D.Double();
         boolean first = true;
 
         for (double x = startX; x <= endX; x += 0.05) {
-            double y = (x + 3) / (x - 2);
+            if (Math.abs(x) < 0.01) continue; // 0-ге бөлуден сақтану
 
-            int screenX = (int) (centerX + x * scale);
-            int screenY = (int) (centerY - y * scale);
+            double y = 1.0 / x;
+
+            // Экрандағы координаталарға айналдыру
+            double screenX = cx + x * scale;
+            double screenY = cy - y * scale;
 
             if (first) {
                 path.moveTo(screenX, screenY);
@@ -63,10 +57,10 @@ public class Task9 extends JPanel {
     }
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("9-тапсырма: Функция графигі");
+        JFrame frame = new JFrame("8-тапсырма: y = 1/x графигі");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(new Task9());
-        frame.setSize(800, 600);
+        frame.add(new Taskk8());
+        frame.setSize(600, 600);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }

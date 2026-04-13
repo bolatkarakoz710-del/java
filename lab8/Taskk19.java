@@ -3,7 +3,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Task19 extends JPanel {
+public class Taskk19 extends JPanel {
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -56,7 +56,7 @@ public class Task19 extends JPanel {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Функция графигі: y = x / (x^2 - 3x + 1)");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(new Task19());
+        frame.add(new Taskk19());
         frame.setSize(800, 600);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);

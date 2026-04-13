@@ -20,6 +20,6 @@ public class Task7 extends JFrame {
     }
 
     public static void main(String[] args) {
-        new Task7();
+        new Taskk7();
     }
 }

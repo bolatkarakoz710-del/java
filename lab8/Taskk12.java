@@ -3,7 +3,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Task12 extends JPanel {
+public class Taskk12 extends JPanel {
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -54,7 +54,7 @@ public class Task12 extends JPanel {
     public static void main(String[] args) {
         JFrame frame = new JFrame("12-тапсырма: Функция графигі");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(new Task12());
+        frame.add(new Taskk12());
         frame.setSize(800, 600);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);

@@ -3,7 +3,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Task2 extends JPanel {
+public class Taskk4 extends JPanel {
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -13,45 +13,42 @@ public class Task2 extends JPanel {
 
         int width = getWidth();
         int height = getHeight();
-
-        // Координаттар жүйесінің ортасын анықтау
         int centerX = width / 2;
         int centerY = height / 2;
+        double scale = 40.0; // Масштаб: 1 бірлік = 40 пиксель
 
         // Осьтерді сызу
         g2.drawLine(0, centerY, width, centerY); // X осі
         g2.drawLine(centerX, 0, centerX, height); // Y осі
 
         g2.setColor(Color.RED);
+        g2.setStroke(new BasicStroke(2f));
 
-        // Масштаб (координаттарды экранда көрінетіндей үлкейту)
-        double scale = 20.0;
-
-        // Графикті салу (y = 3 * x^2)
-        int prevX = 0, prevY = 0;
-        boolean first = true;
+        // Графикті салу (нүкте-нүкте бойынша)
+        Integer prevX = null;
+        Integer prevY = null;
 
         for (double x = -10; x <= 10; x += 0.1) {
-            double y = 3 * Math.pow(x, 2);
+            // Функция: y = x^3 + 2x^2 + x
+            double y = Math.pow(x, 3) + 2 * Math.pow(x, 2) + x;
 
-            // Экрандағы пиксель координаты
+            // Координаталарды экран нүктелеріне айналдыру
             int screenX = (int) (centerX + x * scale);
             int screenY = (int) (centerY - y * scale);
 
-            if (!first) {
+            if (prevX != null && screenY > 0 && screenY < height) {
                 g2.drawLine(prevX, prevY, screenX, screenY);
             }
 
             prevX = screenX;
             prevY = screenY;
-            first = false;
         }
     }
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("y = 3x^2 Графигі");
+        JFrame frame = new JFrame("y = x^3 + 2x^2 + x графигі");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(new Task2());
+        frame.add(new Taskk4());
         frame.setSize(800, 600);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);

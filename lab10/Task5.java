@@ -11,7 +11,7 @@ public class Task5 extends JPanel {
 
     public static void main(String[] args) {
         JFrame f = new JFrame();
-        Task5 panel = new Task5();
+        Taskk5 panel = new Taskk5();
 
         JTextField tfX = new JTextField();
         JTextField tfY = new JTextField();

@@ -3,7 +3,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Task6 extends JPanel {
+public class Taskk6 extends JPanel {
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -50,7 +50,7 @@ public class Task6 extends JPanel {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Java-дағы Sin(x) графигі");
-        Task6 panel = new Task6();
+        Taskk6 panel = new Taskk6();
 
         frame.add(panel);
         frame.setSize(800, 400);

@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Path2D;
 
-public class Task17 extends JPanel {
+public class Taskk16 extends JPanel {
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -16,9 +16,9 @@ public class Task17 extends JPanel {
         int height = getHeight();
         int centerX = width / 2;
         int centerY = height / 2;
-        double scale = 40.0; // Масштаб
+        double scale = 50.0; // Масштаб: 1 бірлік = 50 пиксель
 
-        // Координаттар жүйесін сызу
+        // Координаталық осьтерді сызу
         g2.setColor(Color.LIGHT_GRAY);
         g2.drawLine(0, centerY, width, centerY); // X осі
         g2.drawLine(centerX, 0, centerX, height); // Y осі
@@ -27,42 +27,42 @@ public class Task17 extends JPanel {
         Path2D path = new Path2D.Double();
         boolean firstPoint = true;
 
-        // Функцияны сызу: y = x / (x^2 - 2x + 1)
+        // Графикті салу (x = -1 нүктесін айналып өту керек)
         for (int i = 0; i < width; i++) {
             double x = (i - centerX) / scale;
 
-            // x = 1 болғанда үзіліс (асимптота)
-            if (Math.abs(x - 1.0) < 0.1) {
+            // Бөлімі нөлге жуық болса, өткізіп жіберу (асимптота)
+            double denominator = Math.pow(x, 2) + 2 * x + 1;
+            if (Math.abs(denominator) < 0.01) {
                 firstPoint = true;
                 continue;
             }
 
-            double y = x / (Math.pow(x, 2) - 2 * x + 1);
-            int screenY = (int) (centerY - y * scale);
+            double y = x / denominator;
+            int screenY = centerY - (int) (y * scale);
 
-            if (screenY > 0 && screenY < height) {
-                if (firstPoint) {
-                    path.moveTo(i, screenY);
-                    firstPoint = false;
-                } else {
-                    path.lineTo(i, screenY);
-                }
+            if (firstPoint) {
+                path.moveTo(i, screenY);
+                firstPoint = false;
             } else {
-                firstPoint = true;
+                // График экран шекарасынан шығып кетсе үзіліс жасау
+                if (screenY > 0 && screenY < height) {
+                    path.lineTo(i, screenY);
+                } else {
+                    firstPoint = true;
+                }
             }
         }
         g2.draw(path);
 
-        // Анықталу облысын жазу
-        g2.setColor(Color.BLACK);
-        g2.drawString("Анықталу облысы: x ≠ 1", 20, 30);
-        g2.drawString("Функция: y = x / (x - 1)²", 20, 50);
+        g2.setColor(Color.RED);
+        g2.drawString("y = x / (x^2 + 2x + 1)", 20, 30);
     }
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("17-тапсырма: Функция графигі");
+        JFrame frame = new JFrame("Функция графигі");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(new Task17());
+        frame.add(new Taskk16());
         frame.setSize(800, 600);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);

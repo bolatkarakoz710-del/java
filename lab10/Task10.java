@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
 public class Task10 extends JPanel {
     Color color = Color.RED;
@@ -13,7 +12,7 @@ public class Task10 extends JPanel {
 
     public static void main(String[] args) {
         JFrame f = new JFrame();
-        Task10 panel = new Task10();
+        Taskk10 panel = new Taskk10();
 
         JCheckBox red = new JCheckBox("Red");
         JCheckBox green = new JCheckBox("Green");

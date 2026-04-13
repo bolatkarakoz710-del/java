@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Path2D;
 
-public class Task10 extends JPanel {
+public class Taskk10 extends JPanel {
 
     // График параметрлері
     private final int WIDTH = 800;
@@ -60,7 +60,7 @@ public class Task10 extends JPanel {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Функция графигі - 10 тапсырма");
-        Task10 panel = new Task10();
+        Taskk10 panel = new Taskk10();
         frame.add(panel);
         frame.setSize(800, 600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

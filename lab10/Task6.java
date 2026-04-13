@@ -23,7 +23,7 @@ public class Task6 extends JPanel {
 
     public static void main(String[] args) {
         JFrame f = new JFrame();
-        f.add(new Task6());
+        f.add(new Taskk6());
         f.setSize(300, 300);
         f.setVisible(true);
     }

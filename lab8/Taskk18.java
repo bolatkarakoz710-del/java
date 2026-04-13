@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Path2D;
 
-public class Task18 extends JPanel {
+public class Taskk18 extends JPanel {
 
     private static final int WIDTH = 800;
     private static final int HEIGHT = 600;
@@ -64,7 +64,7 @@ public class Task18 extends JPanel {
     public static void main(String[] args) {
         JFrame frame = new JFrame("18-тапсырма: Функция графигі");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(new Task18());
+        frame.add(new Taskk18());
         frame.setSize(WIDTH, HEIGHT);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);

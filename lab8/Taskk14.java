@@ -3,7 +3,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Task14 extends JPanel {
+public class Taskk14 extends JPanel {
 
     // Функцияның анықталу облысын есептеу және мәнін қайтару
     // y = 1 / (x^2 + 3x + 1)
@@ -65,7 +65,7 @@ public class Task14 extends JPanel {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Функция графигі: y = 1 / (x^2 + 3x + 1)");
-        Task14 panel = new Task14();
+        Taskk14 panel = new Taskk14();
         frame.add(panel);
         frame.setSize(800, 600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
